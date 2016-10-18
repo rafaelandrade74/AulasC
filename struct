@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+struct Data {
+	int dia , mes , ano;
+	
+};
+struct Aluno{
+	char Nome[150],Turma[1];
+	int semestre,turno;
+	double RA;
+	struct Data DataMatriculada;
+	
+};
+
+
+int main(){
+	
+	struct Aluno TADS;
+	
+	strcpy(TADS.Nome,"Rafael Andrade da Silva"); 
+	strcpy(TADS.Turma,"A");
+	TADS.RA = 2215100617;
+	TADS.semestre = 4;
+	TADS.turno = 3;
+	TADS.DataMatriculada.dia = 3;
+	TADS.DataMatriculada.mes = 8;
+	TADS.DataMatriculada.ano = 2014;
+	
+	printf("Nome:%s\t Turma:%s\n RA:%.0f\n Semestre:%d \t\t Turno:%d\n ",TADS.Nome,TADS.Turma,TADS.RA,TADS.semestre,TADS.turno);
+	
+	printf("Data:%d %d %d\n",TADS.DataMatriculada.dia,TADS.DataMatriculada.mes,TADS.DataMatriculada.ano);
+	
+	system ("PAUSE"); 
+	return 0;
+}
